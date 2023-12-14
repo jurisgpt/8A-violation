@@ -1,0 +1,53 @@
+Algorithm: Evaluate Eighth Amendment Violation
+
+Input: 
+- facts_of_case: a set of facts related to the inmate's health or safety
+- official_actions: actions taken or not taken by the prison official
+- medical_records: documentation of the inmate's medical needs and treatments
+
+Output:
+- Eighth_Amendment_violation: Boolean (True if violation occurred, False otherwise)
+
+Procedure:
+1. Initialize Eighth_Amendment_violation to False
+   // Assume no violation by default
+
+2. Initialize substantial_risk_of_serious_harm to False
+   // Assess the risk to the inmate's health or safety
+
+   // Assess severity and urgency of medical condition
+   If medical_records indicate a serious condition requiring immediate attention or with high risk of deterioration:
+       Set substantial_risk_of_serious_harm to True
+
+   // Evaluate potential for future harm
+   If facts_of_case show high likelihood of significant harm without proper medical care:
+       Set substantial_risk_of_serious_harm to True
+
+   // Consider nature of risk
+   If the risk is ongoing, frequent, or particularly severe:
+       Set substantial_risk_of_serious_harm to True
+
+3. If substantial_risk_of_serious_harm:
+    // Only proceed if substantial risk is identified
+
+    3.1. Determine if the prison official was subjectively_aware of the risk based on official_actions and facts_of_case
+        // Check if the official knew about the risk
+
+    3.2. If subjectively_aware:
+        // Assess the official's response to the risk
+
+        3.2.1. Evaluate if the official showed deliberate_indifference based on official_actions
+            // Indifference is when an official knows of and disregards an excessive risk
+
+        3.2.2. Assess causation based on the link between official's actions/inactions and harm to the inmate
+            // Confirm if the official's indifference led to the harm
+
+        3.2.3. If deliberate_indifference and causation:
+            // Confirm violation if both conditions are met
+
+            3.2.3.1. Set Eighth_Amendment_violation to True
+
+4. Return Eighth_Amendment_violation
+   // Output the final determination
+
+End Procedure
